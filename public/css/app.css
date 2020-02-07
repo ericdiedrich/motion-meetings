@@ -1,0 +1,49 @@
+body {
+    background: #c8d6e5;
+}
+
+.roomcardContainer {
+    display: flex;
+    border: solid 5px;
+    margin: 20px 20px 20px 20px;
+    background: #8395a7;
+    width: 700px;
+}
+
+.roomTitleCapacityWrapper {
+    justify-items: flex-end;
+}
+
+.detailsWrapper {
+    background: #c8d6e5;
+    border: solid 5px;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.roomName {
+    background: #ff6b6b;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 15px 10px 15px;
+    border-radius: 15px;
+}
+
+.bookingBtn {
+    background: #ff6b6b;
+    padding: 10px 15px 10px 15px;
+    /* margin: 10px 15px 10px 15px; */
+    border-radius: 15px;
+}
+
+.meetingFullContainer {
+    display: flex;
+}
+
+.bookedMeetings {
+    display: flex;
+}
+
+.timeSection {
+    padding: 10px 15px 10px 15px;
+    margin: 10px 15px 10px 15px;
+}

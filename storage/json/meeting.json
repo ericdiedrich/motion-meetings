@@ -1,0 +1,66 @@
+{
+    "pinkroom": {        
+        "name": "The pink room",
+        "capacity": 5,
+        "phone": true,
+        "tv": false,
+        "projector": true,
+        "wheelchairacess": true,
+        "bookedmeetings":{
+            "meeting1": false,
+            "meeting2": false,
+            "meeting3": false,
+            "meeting4": false,
+            "meeting5": false,
+            "meeting6": false,
+            "meeting7": false,
+            "meeting8": false,
+            "meeting9": false,
+            "meeting10": false,
+            "meeting11": false
+        }
+    },
+    "orangeroom": {
+        "name": "The orange room",
+        "capacity": 10,
+        "phone": true,
+        "tv": true,
+        "projector": false,
+        "wheelchairacess": false,
+        "bookedmeetings":{
+            "meeting1": false,
+            "meeting2": false,
+            "meeting3": false,
+            "meeting4": false,
+            "meeting5": false,
+            "meeting6": false,
+            "meeting7": false,
+            "meeting8": false,
+            "meeting9": false,
+            "meeting10": false,
+            "meeting11": false
+        }
+    },
+    "blueroom": {
+        "name": "The blue room",
+        "capacity": 2,
+        "phone": true,
+        "tv": false,
+        "projector": false,
+        "wheelchairacess": true,
+        "bookedmeetings":{
+            "meeting1": false,
+            "meeting2": false,
+            "meeting3": false,
+            "meeting4": false,
+            "meeting5": false,
+            "meeting6": false,
+            "meeting7": false,
+            "meeting8": false,
+            "meeting9": false,
+            "meeting10": false,
+            "meeting11": false
+        }
+    }
+
+}

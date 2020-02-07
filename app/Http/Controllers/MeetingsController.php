@@ -14,7 +14,12 @@ class MeetingsController extends Controller
      */
     public function index()
     {
-        //
+        // $rooms = json_decode(file_get_contents("meeting.json"), true);
+        $path = storage_path() . "/json/meeting.json"; // ie: /var/www/laravel/app/storage/json/filename.json
+
+        $json = json_decode(file_get_contents($path), true); 
+
+        return view ('meetings.index')->with('json', $json);
     }
 
     /**
