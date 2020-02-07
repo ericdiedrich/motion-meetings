@@ -1,0 +1,27 @@
+{
+    "pinkroom": {        
+        "name": "The pink room",
+        "capacity": 5,
+        "phone": true,
+        "tv": false,
+        "projector": true,
+        "wheelchairacess": true
+    },
+    "orangeroom": {
+        "name": "The orange room",
+        "capacity": 10,
+        "phone": true,
+        "tv": true,
+        "projector": false,
+        "wheelchairacess": false
+    },
+    "blueroom": {
+        "name": "The blue room",
+        "capacity": 2,
+        "phone": true,
+        "tv": false,
+        "projector": false,
+        "wheelchairacess": true
+    }
+
+}
