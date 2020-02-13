@@ -1,66 +1,275 @@
 {
+        
     "pinkroom": {        
         "name": "The pink room",
+        "tag": "pinkroom",
         "capacity": 5,
         "phone": true,
         "tv": false,
         "projector": true,
         "wheelchairacess": true,
-        "bookedmeetings":{
-            "meeting1": false,
-            "meeting2": false,
-            "meeting3": false,
-            "meeting4": false,
-            "meeting5": false,
-            "meeting6": false,
-            "meeting7": false,
-            "meeting8": false,
-            "meeting9": false,
-            "meeting10": false,
-            "meeting11": false
+        "meetings": [
+        {
+            "timeSlot": "9:00-9:30",
+            "booked": true,
+            "numberOfPeople": 2,
+            "duration": 30,
+            "meetingName": "React Front-End Meeting",
+            "bookerName": "Eric Diedrichs"
+        },
+        {
+            "timeSlot": "9:30-10:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "10:00-10:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "10:30-11:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "11:00-11:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "11:30-12:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "12:00-12:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "12:30-13:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "13:00-13:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "13:30-14:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
         }
-    },
+    ]},
+
     "orangeroom": {
         "name": "The orange room",
+        "tag": "orangeroom",
         "capacity": 10,
         "phone": true,
         "tv": true,
         "projector": false,
         "wheelchairacess": false,
-        "bookedmeetings":{
-            "meeting1": false,
-            "meeting2": false,
-            "meeting3": false,
-            "meeting4": false,
-            "meeting5": false,
-            "meeting6": false,
-            "meeting7": false,
-            "meeting8": false,
-            "meeting9": false,
-            "meeting10": false,
-            "meeting11": false
+        "meetings": [
+        {
+            "timeSlot": "9:00-9:30",
+            "booked": true,
+            "numberOfPeople": 2,
+            "duration": 30,
+            "meetingName": "React Front-End Meeting",
+            "bookerName": "Eric Diedrichs"
+        },
+        {
+            "timeSlot": "9:30-10:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "10:00-10:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "10:30-11:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "11:00-11:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "11:30-12:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "12:00-12:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "12:30-13:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "13:00-13:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "13:30-14:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
         }
-    },
+    ]},
+
     "blueroom": {
         "name": "The blue room",
+        "tag": "blueroom",
         "capacity": 2,
         "phone": true,
         "tv": false,
         "projector": false,
         "wheelchairacess": true,
-        "bookedmeetings":{
-            "meeting1": false,
-            "meeting2": false,
-            "meeting3": false,
-            "meeting4": false,
-            "meeting5": false,
-            "meeting6": false,
-            "meeting7": false,
-            "meeting8": false,
-            "meeting9": false,
-            "meeting10": false,
-            "meeting11": false
+        "meetings": [
+        {
+            "timeSlot": "9:00-9:30",
+            "booked": true,
+            "numberOfPeople": 2,
+            "duration": 30,
+            "meetingName": "React Front-End Meeting",
+            "bookerName": "Eric Diedrichs"
+        },
+        {
+            "timeSlot": "9:30-10:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "10:00-10:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "10:30-11:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "11:00-11:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "11:30-12:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "12:00-12:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "12:30-13:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "13:00-13:30",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
+        },
+        {
+            "timeSlot": "13:30-14:00",
+            "booked": false,
+            "numberOfPeople": null,
+            "duration": null,
+            "meetingName": null,
+            "bookerName": null
         }
-    }
-
+    ]}
 }

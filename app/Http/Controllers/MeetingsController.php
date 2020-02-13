@@ -14,12 +14,11 @@ class MeetingsController extends Controller
      */
     public function index()
     {
-        // $rooms = json_decode(file_get_contents("meeting.json"), true);
-        $path = storage_path() . "/json/meeting.json"; // ie: /var/www/laravel/app/storage/json/filename.json
-
+        $path = storage_path() . "/json/meeting.json";
         $json = json_decode(file_get_contents($path), true); 
+        // return view ('meetings.index')->with('json', $json);
+        return view('meetings.question');
 
-        return view ('meetings.index')->with('json', $json);
     }
 
     /**
@@ -29,7 +28,21 @@ class MeetingsController extends Controller
      */
     public function create()
     {
-        //
+        $path = storage_path() . "/json/meeting.json";
+        $json = json_decode(file_get_contents($path), true); 
+        $room = $_GET['room'];
+        if ($room == "pinkroom") {
+            return view('meetings.pinkroom')->with('json', $json);;
+        } elseif ($room == "orangeroom") {
+            return view('meetings.orangeroom')->with('json', $json);;
+        } elseif ($room == "blueroom") {
+            return view('meetings.blueroom')->with('json', $json);;
+        } else {
+            echo "error";
+        }
+        return view ('meetings.create')->with('json', $json);
+        // var_dump($room);
+        // return view('meetings.create');
     }
 
     /**
@@ -40,7 +53,8 @@ class MeetingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $path = storage_path() . "/json/meeting.json";
+        $json = json_decode(file_get_contents($path), true); 
     }
 
     /**
