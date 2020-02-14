@@ -1,8 +1,8 @@
 @extends('layouts.app')
     @section('content')
-        <h1>THIS SPECIFIC MEETING</h1>
-        <form action="/motion-meeting/public/rooms" method="get">
-            <div>
+      <h1>THIS SPECIFIC MEETING</h1>
+      <form action="/motion-meeting/public/bookroom" method="POST">
+        <div>
                 <label for="numberOfPeople">How many people</label>
                 <input name="numberOfPeople" type="text">
 
@@ -37,7 +37,10 @@
                       </label>
                 </div>
             
-            </div>
-            <button type="submit" onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/bookroom?meeting={{$selectedRoom}}}}'">SUBMIT</button>
-        </form>
+          </div>
+          <button name="submit" type="submit">SUBMIT</button>
+          {{ csrf_field() }}
+      </form>
     @endsection
+
+    {{-- onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/bookroom?meeting={{$selectedRoom}}}} --}}

@@ -9,69 +9,30 @@ class RoomsController extends Controller
     public function rooms() {
 
         $path = storage_path() . "/json/meeting.json";
-        $json = json_decode(file_get_contents($path), true); 
-        // var_dump($json);
-
+        $json = json_decode(file_get_contents($path), true);
         $number = $_GET['numberOfPeople'];
         $int_cast = (int)$number;
-        // var_dump(gettype($int_cast));
-        // $arrays = ["pink" => [5, "TV"], "orange" => [10, "TV"], "blue" => [2, "Phone"]];
         $selectedRooms = [];
 
-        // foreach($json as $room) {
-        //     if( $room["capacity"] > $int_cast  ) {
-        //         array_push($selectedRooms, $capacity);
-        //         return view('meetings.pinkroom')->with('json', $json);
-        //     } elseif ($array[0] < $int_cast) {
-        //         return view('meetings.orangeroom')->with('json', $json);
-        //     } elseif ($array[0] > $int_cast) {
-        //         return view('meetings.blueroom')->with('json', $json);;
-        //     } else {
-        //         echo "error";
-        //     }    
-        // }
-
         foreach ($json as $key => $values) {
-            // foreach ($room->capacity as $capacity) {
-            //     if( $capacity > $int_cast  ) {
-            //         array_push($selectedRooms, $capacity);
-            //         return view('meetings.pinkroom')->with('json', $json);
-            //     }   
-            // }
-            // print_r($values["capacity"]);
-            // echo "<br />";
-
-            if( $values["capacity"] >= $int_cast  ) {
+            if(is_array($values) && $values['capacity'] >= $int_cast) {
                 array_push($selectedRooms, $values);
                 echo 'The room ' . $values['tag'] .  ' can fit ' . $int_cast . ' because it has a capacity of ' . $values['capacity'];
                 echo "<br />";
             }
+        }
 
-
-
-
-
-            // foreach($values as $key2 => $values2) {
-            //     // print_r($values2);
-            //     echo $values2;
-            //     echo "<br />";
-            // }
-            
-          }
         return view ('meetings.rooms')->with('selectedRooms', $selectedRooms);
-        // return view('meetings.rooms')->with('number', $selectedRooms);
     }
 
     public function book() {
         $path = storage_path() . "/json/meeting.json";
         $json = json_decode(file_get_contents($path), true);
-
         $selectedRoom = $_GET['room'];
-  
         $roomDetails = [];
 
         foreach ($json as $key => $values) {
-            if( $values["tag"] == $_GET['room']  ) {
+            if(is_array($values) && $values['tag'] == $_GET['room']) {
                 array_push($roomDetails, $values);
             }
         }
@@ -91,7 +52,7 @@ class RoomsController extends Controller
         $roomDetails = [];
 
         foreach ($json as $key => $values) {
-            if( $values["tag"] == $_GET['meeting']  ) {
+            if(is_array($values) && $values['tag'] == $_GET['meeting']) {
                 array_push($roomDetails, $values);
             }
         }
@@ -100,14 +61,39 @@ class RoomsController extends Controller
             'roomDetails' => $roomDetails,
             'selectedRoom' => $selectedRoom
         ];
-        return view ('meetings.bookroom')->with($data);
 
-        
+
+
+        return view ('meetings.bookroom')->with($data);   
     }
 
+    public function bookmeeting() {
+        $path = storage_path() . "/json/meeting.json";
+        $json = json_decode(file_get_contents($path), true);
+
+        $myMeetingName = request()->input('meetingName');
+
+        foreach ($json as $key => $values) {
+            foreach ($values as $key2 => $meeting) {
+                if(!empty(request()->input($myMeetingName))){
+                    $meeting['meetingName'] = request()->input($myMeetingName);
+                    file_put_contents($path, json_encode($json, JSON_PRETTY_PRINT));
+                    // $meeting['booked'] = request()->input(true);
+                    // $meeting['duration'] = request()->input('duration');
+                    // $meeting['meetingName'] = request()->input('meetingName');
+                    // $meeting['bookerName'] = request()->input('bookerName');
+
+                        // if($meeting === 'meetingName') {
+                        //     $meeting[value] = json.update($myMeetingName);
+                        // }
+                }
+            }
+            
+        }
 
 
-
-
-
+        // file_put_contents($path, json_encode($json, JSON_PRETTY_PRINT));
+        // return redirect()->back()->with('success', 'This was succesfully updated');
+    }
+ 
 }

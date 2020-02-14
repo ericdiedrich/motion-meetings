@@ -16,3 +16,4 @@ Route::resource('/meetings', 'MeetingsController');
 Route::get('/rooms', 'RoomsController@rooms');
 Route::get('/book', 'RoomsController@book');
 Route::get('/bookroom', 'RoomsController@bookroom');
+Route::post('/bookroom', 'RoomsController@bookmeeting');
