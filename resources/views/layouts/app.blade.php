@@ -9,10 +9,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <button onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/meetings'" class="offset">Motion Meetings!</button>
+        <button onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/'" class="offset">Motion Meetings!</button>
         <div>
             <li class="navli">
-                {{-- <button onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/meetings'"  class="raise">Home</button> --}}
+                <button onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/meetings'"  class="raise">Book a Meeting!</button>
                 {{-- <button onclick="window.location.href='http:\/\/localhost:8888/mmorpg-ericdiedrich/public/login'" class="raise">Login</button> --}}
                 {{-- <button onclick="window.location.href='http:\/\/localhost:8888/mmorpg-ericdiedrich/public/register'" class="raise">Register</button> --}}
             </li>

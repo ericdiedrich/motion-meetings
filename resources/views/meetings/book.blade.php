@@ -1,7 +1,6 @@
 @extends('layouts.app')
     @section('content')
         @foreach($roomDetails as $key => $value)
-            <p>{{ $value['name'] }}</p>
             @foreach($value['meetings'] as $key2 => $meeting)
                 <div class="meetingFullContainer">
                     <div class="roomcardContainer">
@@ -12,8 +11,6 @@
                             <p>Name : {{ $meeting['meetingName'] }}</p>
                             <p>Booker : {{ $meeting['bookerName'] }}</p>
                             <div class="btnWrapper">
-                                {{-- {{var_dump($selectedRoom)}}
-                                {{var_dump($value2)}} --}}
                             <button class={{$meeting['booked'] ? "pulse" : "raise"}} onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/bookroom?meeting={{$selectedRoom}}&data={{$meeting['timeSlot']}}'"> {{ $meeting['booked'] ? "Booked" : "Book Meeting!" }}</button>
                             </div>
                         </div>
