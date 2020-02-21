@@ -73,7 +73,7 @@
 }
 
 .fill {
-  --color: #a972cb;
+  --color: #cd70da;
   --hover: #cb72aa;
 }
 
@@ -176,8 +176,20 @@ code {
   padding: 30px 35px;
 }
 
+li {
+  list-style-type: none;
+}
+
+.selectDropDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar .navli {
   display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .navbar .navli .navA {
@@ -187,6 +199,7 @@ code {
   background-color: #34495e;
   color: #2ecc71;
   font-size: 20px;
+  list-style-type: none;
 }
 
 .navA {
@@ -272,23 +285,45 @@ form {
   border-radius:6px;
   padding:20px;
   padding-top:30px;
-  width:300px;
+  width: 400px;
   margin:50px auto;
   box-shadow:15px 15px 0px rgba(0,0,0,.1);
   justify-content: center;
   align-items: center;
 }
 
-.meetingFullContainer {
+.storeForm {
   display: flex;
   flex-direction: column;
   background:#576574;
   border-radius:6px;
   padding:20px;
   padding-top:30px;
-  width:300px;
+  width: 400px;
   margin:50px auto;
   box-shadow:15px 15px 0px rgba(0,0,0,.1);
+  justify-content: center;
+  align-items: center;
+}
+
+.storeForm2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.storeForm input {
+  width:75%;
+  background:#f5f5f5;
+  border:0;
+  padding:10px;
+  border-radius:6px;
+  margin: 35px;
+  border:1px solid #eee;
+}
+
+.storeForm label {
   justify-content: center;
   align-items: center;
 }
@@ -297,7 +332,15 @@ h1 {
   text-align:center;
   font-size:1.4em;
   font-weight:700;
-  color:#ccc;
+  color:#19bc8b;
+  margin-bottom:24px;
+}
+
+h3 {
+  text-align:center;
+  // font-size:1.4em;
+  // font-weight:700;
+  // color:#19bc8b;
   margin-bottom:24px;
 }
 
@@ -306,12 +349,12 @@ span {
 }
 
 input {
-  width:100%;
+  width:75%;
   background:#f5f5f5;
   border:0;
   padding:10px;
   border-radius:6px;
-  margin-bottom:10px;
+  margin: 35px;
   border:1px solid #eee;
 }
 
@@ -405,7 +448,145 @@ input {
 }
 
 .questionH1 {
+  align-content: center;
   text-align: center;
   padding: 10px;
   margin: 10px;
 }
+
+.roomTitle {
+  color: #19bc8b;
+}
+
+.navImg {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.mainNavImg {
+  margin: -25px;
+  cursor: pointer;
+}
+
+.aboutFullContainer {
+  // display: flex;
+  // flex-direction: column;
+  background:#576574;
+  border-radius:6px;
+  padding:20px;
+  padding-top:30px;
+  width:500px;
+  margin:50px auto;
+  box-shadow:15px 15px 0px rgba(0,0,0,.1);
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.profileFullContainer {
+  display: flex;
+  flex-direction: column;
+  background:#576574;
+  border-radius:6px;
+  padding:20px;
+  padding-top:30px;
+  width:500px;
+  margin:50px auto;
+  box-shadow:15px 15px 0px rgba(0,0,0,.1);
+  justify-content: center;
+  align-items: center;
+}
+
+.meetingFullContainer {
+  display: flex;
+  flex-direction: column;
+  background:#576574;
+  border-radius:6px;
+  padding:20px;
+  padding-top:30px;
+  width:400px;
+  margin:50px auto;
+  box-shadow:15px 15px 0px rgba(0,0,0,.1);
+  justify-content: center;
+  align-items: center;
+}
+
+.roomFullContainer {
+  display: flex;
+  flex-direction: column;
+  background: #B53471;
+  border-radius:6px;
+  padding:20px;
+  padding-top:30px;
+  width:400px;
+  margin:50px auto;
+  box-shadow:15px 15px 0px rgba(0,0,0,.1);
+  justify-content: center;
+  align-items: center;
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailsWrapperP {
+  padding: 5px;
+}
+
+.detailsWrapperH4 {
+  text-align: center;
+  display: flex;
+  // flex-direction: column;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.h4roomFull {
+  text-align:center;
+  // font-size:1.4em;
+  // font-weight:700;
+  // color:#19bc8b;
+  margin-bottom:24px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+  body,
+  .aboutFullContainer {
+    background-color: orange;
+  }
+
+  .mainNavImg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body,
+  .aboutFullContainer {
+    background-color: red;
+  }
+
+    .mainNavImg {
+      display: none;
+    }
+
+}
+

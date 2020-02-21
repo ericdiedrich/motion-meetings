@@ -15,14 +15,23 @@ class RoomsController extends Controller
         return view ('meetings.index')->with('json', $json);
     }
 
+    public function view() {
+        $path = storage_path() . "/json/meeting.json";
+        $json = json_decode(file_get_contents($path), true);
 
 
 
+        return view ('meetings.view')->with('json', $json);
+    }
+
+    public function profile() {
+        $path = storage_path() . "/json/meeting.json";
+        $json = json_decode(file_get_contents($path), true);
 
 
 
-
-
+        return view ('meetings.profile')->with('json', $json);
+    }
 
     public function rooms() {
 
@@ -159,14 +168,33 @@ class RoomsController extends Controller
             //     break;
             // }
         }
-
-        // dd($json);
-
-
         file_put_contents($path, json_encode($json, JSON_PRETTY_PRINT));
         return redirect()->action(
             'RoomsController@rooms', ['numberOfPeople' => 0]
         );
     }
+
+    public function deletemeeting() {
+        $path = storage_path() . "/json/meeting.json";
+        $json = json_decode(file_get_contents($path), true);
+        foreach ($json as $key => $values) {
+            foreach ($values['meetings'] as $key2 => $meeting) {
+                if($meeting['timeSlot'] == $myTimeSlot && $values['tag'] === $myCurrentRoom){
+                    $json[$key]['meetings'][$key2]["bookerName"] = '';
+                    $json[$key]['meetings'][$key2]["meetingName"] = '';
+                    $json[$key]['meetings'][$key2]["duration"] = '';
+                    $json[$key]['meetings'][$key2]["numberOfPeople"] = '';
+                    $json[$key]['meetings'][$key2]["timeSlot"] = '';
+                    $json[$key]['meetings'][$key2]["booked"] = false;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
  
 }

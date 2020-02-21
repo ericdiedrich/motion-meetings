@@ -1,32 +1,21 @@
 @extends('layouts.app')
     @section('content')
-        @foreach($json as $key => $value)
-        <div class="">
-            <div class="">
-                <div class=""> 
-                    <h4>Room: {{ $value['name' ]}}</h4>   
-                    <p>Capacity: {{ $value['capacity'] }}</p>
-                    <div class="btnWrapper">
-                    {{-- <button class={{$meeting['booked'] ? "pulse" : "raise"}} onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/bookroom?meeting={{$selectedRoom}}&data={{$meeting['timeSlot']}}'"> {{ $meeting['booked'] ? "Booked" : "Book Meeting!" }}</button> --}}
-                    </div>
-                </div>
-            </div>
+    <div class="aboutFullContainer">
+        <div class="aboutContainer">
+            <h1>Motion Meetings</h1>
+            <p class="h4roomFull">Welcome to the Motionlab Booking app for all your meetings!</p>
+            <h2 class="h4roomFull">About Motion Lab</h2>
+            <p class="h4roomFull">We are tech fans, we don’t mind admitting it. We build technical platforms 
+            and experiences that make the users digital relationship with you as personal 
+            and intuitive as possible. At all times being acutely aware of the commercial 
+            reasons behind the technology and the outcomes the platform has to deliver on.</p>
+        
+            <p class="h4roomFull">Every person in our business is deeply passionate about their job and the work 
+            they do. We only employ the very best people, we’re not a huge blue chip agency, 
+            with teams of juniors all doing your work, we’re perfectly formed to deliver 
+            expertise across the entire digital playbook. Over 15 years in the digital world 
+            has taught us that brilliant people do brilliant things, you deserve nothing less.
+            Find out more at: <a>https://www.motionlab.co.uk/</a> </p>
         </div>
-            @foreach($value['meetings'] as $key2 => $meeting)
-                <div class="meetingFullContainer">
-                    <div class="roomcardContainer">
-                        <div class="detailsWrapper"> 
-                            <h4>TIME SLOT : {{ $meeting['timeSlot' ]}}</h4>   
-                            <p>Number of People attending : {{ $meeting['numberOfPeople'] }}</p>
-                            <p>Duration of Meeting : {{ $meeting['duration'] }}</p>
-                            <p>Name : {{ $meeting['meetingName'] }}</p>
-                            <p>Booker : {{ $meeting['bookerName'] }}</p>
-                            <div class="btnWrapper">
-                            {{-- <button class={{$meeting['booked'] ? "pulse" : "raise"}} onclick="window.location.href='http:\/\/localhost:8888/motion-meeting/public/bookroom?meeting={{$selectedRoom}}&data={{$meeting['timeSlot']}}'"> {{ $meeting['booked'] ? "Booked" : "Book Meeting!" }}</button> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        @endforeach
+    </div>
     @endsection

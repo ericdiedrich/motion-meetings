@@ -4,6 +4,6 @@
        <form action="/motion-meeting/public/rooms" method="get">
         <label for="numberOfPeople" >How many people are attending?: (Max 10)</label>
         <input name="numberOfPeople" type="text">
-        <button type="submit">SUBMIT</button>
+        <button class="fill" type="submit">SUBMIT</button>
        </form>
     @endsection

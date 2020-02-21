@@ -117,11 +117,11 @@
             },
             {
                 "timeSlot": "10:00-10:30",
-                "booked": false,
-                "numberOfPeople": null,
-                "duration": null,
-                "meetingName": null,
-                "bookerName": null
+                "booked": true,
+                "numberOfPeople": "2",
+                "duration": "30",
+                "meetingName": "Marketing Meeting",
+                "bookerName": "Connor"
             },
             {
                 "timeSlot": "10:30-11:00",
